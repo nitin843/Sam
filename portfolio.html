@@ -1,80 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boundless Moments - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the Boundless Moments photography portfolio — weddings, portraits, events and travel.">
+  <title>Portfolio — Boundless Moments</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Our Portfolio</h1>
-            <p>Explore our collection of stunning photography.</p>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Boundless Moments — home">Boundless Moments</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero--sub" aria-label="Portfolio hero">
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&q=80');" role="img" aria-label="Photographer at work with camera"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Our Work</span>
+      <h1>Portfolio Showcase</h1>
+      <p>A curated collection of our finest work across weddings, portraits, events and travel photography.</p>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section aria-labelledby="portfolio-heading">
+    <div class="container">
+      <span class="section-label">Explore</span>
+      <h2 class="section-title" id="portfolio-heading">Browse by Category</h2>
+      <p class="section-sub">Use the filters below to explore our photography by style and subject.</p>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar" role="group" aria-label="Portfolio category filters">
+        <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="weddings" aria-pressed="false">Weddings</button>
+        <button class="filter-btn" data-filter="portraits" aria-pressed="false">Portraits</button>
+        <button class="filter-btn" data-filter="events" aria-pressed="false">Events</button>
+        <button class="filter-btn" data-filter="travel" aria-pressed="false">Travel</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <!-- Weddings -->
+        <article class="portfolio-card" data-category="weddings">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&q=80" alt="Bride and groom embracing at sunset" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Weddings</span>
+            <h3>Golden Hour Ceremony</h3>
+            <p>A garden wedding bathed in warm golden light, capturing quiet, intimate moments between two people beginning their story together.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="weddings">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Wedding couple walking through floral arch" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Weddings</span>
+            <h3>Floral Arch Elegance</h3>
+            <p>A destination wedding framed by an elaborate floral arch, combining the romance of traditional ceremony with modern styling.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="weddings">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80" alt="Bride and bridesmaids laughing together" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Weddings</span>
+            <h3>Bridal Joy</h3>
+            <p>Candid moments from a joyful bridal preparation session — laughter, anticipation, and genuine emotion preserved forever.</p>
+          </div>
+        </article>
+
+        <!-- Portraits -->
+        <article class="portfolio-card" data-category="portraits">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80" alt="Portrait of woman in soft studio lighting" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Portraits</span>
+            <h3>Soft Light Studio</h3>
+            <p>A minimalist studio portrait session where diffused natural light reveals character and quiet confidence in every frame.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="portraits">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&q=80" alt="Outdoor portrait of woman surrounded by autumn leaves" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Portraits</span>
+            <h3>Autumn Editorial</h3>
+            <p>An outdoor portrait series framed by autumn foliage — editorial in feel yet warm and personal in character.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="portraits">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80" alt="Male portrait with strong directional light" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Portraits</span>
+            <h3>Directional Light</h3>
+            <p>Bold, dramatic portraiture using a single strong light source to sculpt the subject and create a powerful, cinematic image.</p>
+          </div>
+        </article>
+
+        <!-- Events -->
+        <article class="portfolio-card" data-category="events">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Corporate conference crowd" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Events</span>
+            <h3>Conference & Summit</h3>
+            <p>Full event coverage for a regional business summit, from keynote presentations to networking sessions and candid audience moments.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="events">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80" alt="Music concert with colourful stage lighting" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Events</span>
+            <h3>Live Music Coverage</h3>
+            <p>Dynamic event photography from a live music festival — capturing energy, crowd atmosphere, and performance highlights under vivid stage lighting.</p>
+          </div>
+        </article>
+
+        <!-- Travel -->
+        <article class="portfolio-card" data-category="travel">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80" alt="Mountain landscape at sunrise" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Travel</span>
+            <h3>Alpine Dawn</h3>
+            <p>A landscape series shot across alpine terrain at first light — raw, expansive and deeply atmospheric.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="travel">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Cobblestone street in European town" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Travel</span>
+            <h3>European Streets</h3>
+            <p>Urban travel photography from narrow European lanes — architecture, light and local life woven into quiet, compelling frames.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="travel">
+          <img class="portfolio-card-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Sunset over ocean with silhouette" loading="lazy">
+          <div class="portfolio-card-body">
+            <span class="badge">Travel</span>
+            <h3>Coastal Silhouettes</h3>
+            <p>A travel series documenting coastal light and seascapes at dusk — meditative, minimal and full of natural beauty.</p>
+          </div>
+        </article>
+
+      </div><!-- /portfolio-grid -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-logo">Boundless Moments</span>
+          <p>A professional photography portfolio created for a Website Design &amp; Development college assignment.</p>
         </div>
-    </header>
-    
-    <main>
-        <section class="introduction">
-            <h2>Welcome to Our Portfolio</h2>
-            <p>Discover the beauty captured through our lenses. We specialize in various photography styles to cater to your needs.</p>
-        </section>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Book a Session</a></li>
+            <li><a href="contact.html">Send Enquiry</a></li>
+            <li><a href="admin.html">Admin Panel</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Boundless Moments. All rights reserved. Created for educational purposes.</p>
+      </div>
+    </div>
+  </footer>
 
-        <section class="portfolio-filters">
-            <button class="filter-btn" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="weddings">Weddings</button>
-            <button class="filter-btn" data-filter="portraits">Portraits</button>
-            <button class="filter-btn" data-filter="events">Events</button>
-            <button class="filter-btn" data-filter="travel">Travel</button>
-        </section>
-
-        <section class="portfolio-cards">
-            <div class="portfolio-card" data-category="weddings">
-                <img src="assets/images/wedding1.jpg" alt="Wedding Photography">
-                <div class="card-info">
-                    <h3>Wedding Bliss</h3>
-                    <p>A beautiful wedding captured in the golden hour.</p>
-                </div>
-            </div>
-            <div class="portfolio-card" data-category="portraits">
-                <img src="assets/images/portrait1.jpg" alt="Portrait Photography">
-                <div class="card-info">
-                    <h3>Portrait Perfection</h3>
-                    <p>Capturing the essence of personality through portraits.</p>
-                </div>
-            </div>
-            <div class="portfolio-card" data-category="events">
-                <img src="assets/images/event1.jpg" alt="Event Photography">
-                <div class="card-info">
-                    <h3>Event Highlights</h3>
-                    <p>Memorable moments from various events.</p>
-                </div>
-            </div>
-            <div class="portfolio-card" data-category="travel">
-                <img src="assets/images/travel1.jpg" alt="Travel Photography">
-                <div class="card-info">
-                    <h3>Travel Adventures</h3>
-                    <p>Exploring the world through our lenses.</p>
-                </div>
-            </div>
-            <!-- More portfolio cards can be added here -->
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Boundless Moments. All rights reserved.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

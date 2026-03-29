@@ -1,71 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boundless Moments - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boundless Moments — a professional photography portfolio showcasing weddings, portraits, events and travel photography.">
+  <title>Boundless Moments — Home</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Boundless Moments</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Capture the Boundless Moments</h1>
-            <p>Experience the beauty of life through our lens.</p>
-            <a href="portfolio.html" class="cta-button">View Portfolio</a>
-            <a href="contact.html" class="cta-button">Get in Touch</a>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Boundless Moments — home">Boundless Moments</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1600&q=80');" role="img" aria-label="Bride and groom at golden hour"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Photography Portfolio</span>
+      <h1>Capturing meaningful stories through timeless photography.</h1>
+      <p>Boundless Moments is a professional photography portfolio created to showcase the art of visual storytelling across weddings, portraits, events and travel.</p>
+      <div class="hero-cta">
+        <a href="portfolio.html" class="btn btn-primary">View Portfolio</a>
+        <a href="contact.html" class="btn btn-outline">Book a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about-section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80" alt="Photographer reviewing shots on camera" loading="lazy">
         </div>
-    </section>
-
-    <section class="about">
-        <h2>About Us</h2>
-        <p>We are a passionate team of photographers dedicated to capturing the essence of every moment.</p>
-    </section>
-
-    <section class="featured-categories">
-        <h2>Featured Portfolio Categories</h2>
-        <div class="categories">
-            <div class="category">
-                <h3>Weddings</h3>
-                <p>Beautiful moments captured on your special day.</p>
-            </div>
-            <div class="category">
-                <h3>Portraits</h3>
-                <p>Stunning portraits that tell your story.</p>
-            </div>
-            <div class="category">
-                <h3>Events</h3>
-                <p>Memories from every event, big or small.</p>
-            </div>
-            <div class="category">
-                <h3>Travel</h3>
-                <p>Exploring the world through our lens.</p>
-            </div>
+        <div class="about-text">
+          <span class="section-label">About Us</span>
+          <h2 class="section-title" id="about-heading">Telling stories one frame at a time.</h2>
+          <div class="divider"></div>
+          <p>Boundless Moments is a multi-page photography portfolio website developed as part of a Website Design &amp; Development college assignment. It represents a professional photography team dedicated to creating imagery that is both artistically compelling and deeply personal.</p>
+          <p>Our work spans weddings, intimate portrait sessions, corporate and social events, and travel photography from around the world. Every photograph is composed with intention and processed with care to deliver a consistent, high-quality result.</p>
+          <a href="experience.html" class="btn btn-outline" style="margin-top:1.5rem">Meet the Team</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="purpose">
-        <h2>Our Purpose</h2>
-        <p>To create timeless memories that you can cherish forever.</p>
-    </section>
+  <!-- ===== FEATURED CATEGORIES ===== -->
+  <section aria-labelledby="categories-heading">
+    <div class="container">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-title" id="categories-heading">Featured Portfolio Categories</h2>
+      <p class="section-sub">Explore our range of photography services — each crafted with precision and passion.</p>
+      <div class="categories-grid">
+        <a href="portfolio.html" class="category-card" aria-label="View Wedding Photography">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding photography — couple sharing a kiss" loading="lazy">
+          <div class="category-overlay">
+            <h3>Weddings</h3>
+            <p>Timeless moments from your special day.</p>
+          </div>
+        </a>
+        <a href="portfolio.html" class="category-card" aria-label="View Portrait Photography">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Portrait photography — woman in soft light" loading="lazy">
+          <div class="category-overlay">
+            <h3>Portraits</h3>
+            <p>Expressive portraits that capture personality.</p>
+          </div>
+        </a>
+        <a href="portfolio.html" class="category-card" aria-label="View Event Photography">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Event photography — crowd at a conference" loading="lazy">
+          <div class="category-overlay">
+            <h3>Events</h3>
+            <p>Every occasion captured in full detail.</p>
+          </div>
+        </a>
+        <a href="portfolio.html" class="category-card" aria-label="View Travel Photography">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Travel photography — mountain landscape at dawn" loading="lazy">
+          <div class="category-overlay">
+            <h3>Travel</h3>
+            <p>The world as seen through our lens.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2023 Boundless Moments. All rights reserved.</p>
-    </footer>
+  <!-- ===== CTA BAND ===== -->
+  <section class="cta-band" aria-labelledby="cta-heading">
+    <div class="container">
+      <span class="section-label">Get Involved</span>
+      <h2 class="section-title" id="cta-heading">Ready to create something beautiful?</h2>
+      <p>Whether it is a wedding, a portrait session, or a creative project — we would love to work with you. Reach out and let us start building your visual story.</p>
+      <a href="contact.html" class="btn btn-primary">Book a Session</a>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-logo">Boundless Moments</span>
+          <p>A professional photography portfolio created for a Website Design &amp; Development college assignment.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Book a Session</a></li>
+            <li><a href="contact.html">Send Enquiry</a></li>
+            <li><a href="admin.html">Admin Panel</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Boundless Moments. All rights reserved. Created for educational purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
