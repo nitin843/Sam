@@ -1,47 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Boundless Moments</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boundless Moments — an immersive photography gallery showcasing our finest images.">
+  <title>Gallery — Boundless Moments</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h1>Gallery</h1>
-        <p>Explore our collection of stunning photography.</p>
-    </section>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Boundless Moments — home">Boundless Moments</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section class="gallery">
-        <div class="masonry">
-            <div class="masonry-item"><img src="assets/images/photo1.jpg" alt="Gallery Image 1"></div>
-            <div class="masonry-item"><img src="assets/images/photo2.jpg" alt="Gallery Image 2"></div>
-            <div class="masonry-item"><img src="assets/images/photo3.jpg" alt="Gallery Image 3"></div>
-            <div class="masonry-item"><img src="assets/images/photo4.jpg" alt="Gallery Image 4"></div>
-            <div class="masonry-item"><img src="assets/images/photo5.jpg" alt="Gallery Image 5"></div>
-            <div class="masonry-item"><img src="assets/images/photo6.jpg" alt="Gallery Image 6"></div>
-            <div class="masonry-item"><img src="assets/images/photo7.jpg" alt="Gallery Image 7"></div>
-            <div class="masonry-item"><img src="assets/images/photo8.jpg" alt="Gallery Image 8"></div>
+  <!-- ===== HERO ===== -->
+  <section class="hero hero--sub" aria-label="Gallery hero">
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1600&q=80');" role="img" aria-label="Photography camera on dark background"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Visual Archive</span>
+      <h1>The Gallery</h1>
+      <p>An immersive collection of our most evocative images — composed, considered, and made to last.</p>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section aria-labelledby="gallery-heading">
+    <div class="container">
+      <div class="gallery-intro">
+        <span class="section-label">Image Archive</span>
+        <h2 class="section-title" id="gallery-heading">Immersive Photography Gallery</h2>
+        <p class="section-sub" style="margin: 0 auto 3rem;">A selection of photographs from across our portfolio — presented without filters or categories so each image speaks for itself.</p>
+      </div>
+
+      <div class="masonry" role="list" aria-label="Photography gallery">
+
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&q=80" alt="Bride and groom at golden hour" loading="lazy">
         </div>
-    </section>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Mountain landscape at sunrise" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Portrait in soft light" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Corporate event crowd" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding couple under floral arch" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=80" alt="Outdoor autumn portrait" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Coastal sunset silhouette" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&q=80" alt="Live music festival stage" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt="Bridal party laughing together" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="European cobblestone street" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="Dramatic male portrait" loading="lazy">
+        </div>
+        <div class="masonry-item" role="listitem">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80" alt="Photographer at work with camera" loading="lazy">
+        </div>
 
-    <footer>
-        <p>&copy; 2023 Boundless Moments. All rights reserved.</p>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-logo">Boundless Moments</span>
+          <p>A professional photography portfolio created for a Website Design &amp; Development college assignment.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Book a Session</a></li>
+            <li><a href="contact.html">Send Enquiry</a></li>
+            <li><a href="admin.html">Admin Panel</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Boundless Moments. All rights reserved. Created for educational purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

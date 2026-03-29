@@ -1,70 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Boundless Moments</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Boundless Moments admin panel — manage enquiries and site content.">
+  <title>Admin Panel — Boundless Moments</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Admin Panel</h1>
-    </header>
-    <main>
-        <section class="login-section">
-            <div class="login-card">
-                <h2>Login to Your Account</h2>
-                <form id="loginForm">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" required>
-                    <button type="submit">Login</button>
-                </form>
-                <p>Demo Credentials: <br> Email: admin@example.com <br> Password: password123</p>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Boundless Moments — home">Boundless Moments</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero--sub" aria-label="Admin hero" style="min-height:38vh">
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80');" role="img" aria-label="Minimalist dark office desk"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Administration</span>
+      <h1>Admin Panel</h1>
+      <p>Securely manage enquiries and review submitted contact forms.</p>
+    </div>
+  </section>
+
+  <!-- ===== LOGIN ===== -->
+  <section class="admin-login-section" id="adminLogin" aria-labelledby="login-heading">
+    <div class="container">
+      <div class="login-card">
+        <h2 id="login-heading">Sign In</h2>
+        <p>Enter your credentials to access the admin dashboard.</p>
+
+        <form id="loginForm" novalidate aria-label="Admin login form">
+          <div class="form-group">
+            <label for="adminEmail">Email Address</label>
+            <input type="email" id="adminEmail" name="adminEmail" placeholder="admin@boundlessmoments.com" required autocomplete="username">
+          </div>
+          <div class="form-group">
+            <label for="adminPassword">Password</label>
+            <input type="password" id="adminPassword" name="adminPassword" placeholder="••••••••" required autocomplete="current-password">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:.5rem">Login</button>
+          <p class="login-error" id="loginError" role="alert" aria-live="polite"></p>
+        </form>
+
+        <div class="demo-creds" aria-label="Demo login credentials">
+          <strong>Demo Credentials</strong><br>
+          Email: <strong>admin@boundlessmoments.com</strong><br>
+          Password: <strong>admin123</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DASHBOARD ===== -->
+  <section class="dashboard-section hidden" id="adminDashboard" aria-labelledby="dashboard-heading">
+    <div class="container">
+      <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Dashboard navigation">
+          <div class="sidebar-header">
+            <h3>Dashboard</h3>
+          </div>
+          <ul>
+            <li><a href="#dash-stats">📊 Statistics</a></li>
+            <li><a href="#dash-enquiries">📬 Enquiries</a></li>
+            <li><a href="#dash-notes">📝 Admin Notes</a></li>
+          </ul>
+          <button class="sidebar-logout" id="logoutBtn" aria-label="Log out of admin panel">🚪 Log Out</button>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="dashboard-main">
+
+          <!-- Stat Cards -->
+          <div class="dash-stats" id="dash-stats" aria-label="Statistics overview">
+            <div class="dash-stat-card">
+              <span class="stat-number" id="totalEnquiries">0</span>
+              <p>Total Enquiries</p>
             </div>
-        </section>
-        <section id="dashboard" class="hidden">
-            <nav class="sidebar">
-                <ul>
-                    <li><a href="#enquiries">Enquiries</a></li>
-                    <li><a href="#stats">Statistics</a></li>
-                    <li><a href="#notes">Admin Notes</a></li>
-                </ul>
-            </nav>
-            <div class="stats-cards">
-                <div class="stat-card">
-                    <h3>Total Enquiries</h3>
-                    <p id="totalEnquiries">0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>New Enquiries</h3>
-                    <p id="newEnquiries">0</p>
-                </div>
+            <div class="dash-stat-card">
+              <span class="stat-number" id="newEnquiries">0</span>
+              <p>Today's Enquiries</p>
             </div>
-            <section id="enquiries">
-                <h2>Enquiries</h2>
-                <table id="enquiriesTable">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Service</th>
-                            <th>Date</th>
-                            <th>Message</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Enquiries will be populated here -->
-                    </tbody>
-                </table>
-            </section>
-            <section id="notes">
-                <h2>Admin Notes</h2>
-                <textarea id="adminNotes" placeholder="Write your notes here..."></textarea>
-            </section>
-        </section>
-    </main>
-    <script src="js/script.js"></script>
+            <div class="dash-stat-card">
+              <span class="stat-number" id="todayEnquiries">0</span>
+              <p>Submissions This Session</p>
+            </div>
+          </div>
+
+          <!-- Enquiries Table -->
+          <div class="dash-panel" id="dash-enquiries">
+            <h3 id="dashboard-heading">Contact Enquiries</h3>
+            <div style="overflow-x:auto">
+              <table class="enquiries-table" aria-label="Submitted enquiries">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Service</th>
+                    <th scope="col">Event Date</th>
+                    <th scope="col">Message</th>
+                  </tr>
+                </thead>
+                <tbody id="enquiriesBody">
+                  <!-- Populated by script.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Admin Notes -->
+          <div class="dash-panel" id="dash-notes">
+            <h3>Admin Notes</h3>
+            <textarea class="admin-notes-area" id="adminNotes" placeholder="Write your private notes here — they are saved automatically to your browser..." aria-label="Admin notes textarea"></textarea>
+          </div>
+
+        </div><!-- /dashboard-main -->
+      </div><!-- /dashboard-layout -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-logo">Boundless Moments</span>
+          <p>A professional photography portfolio created for a Website Design &amp; Development college assignment.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Admin</h4>
+          <ul>
+            <li><a href="admin.html">Admin Login</a></li>
+            <li><a href="contact.html">View Contact Page</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Boundless Moments. All rights reserved. Created for educational purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
