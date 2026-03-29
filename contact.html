@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Boundless Moments</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Please fill out the form below.</p>
+    </header>
+
+    <main>
+        <form id="contact-form">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="service">Photography Service:</label>
+            <select id="service" required>
+                <option value="">Select a service</option>
+                <option value="wedding">Wedding</option>
+                <option value="portrait">Portrait</option>
+                <option value="event">Event</option>
+                <option value="travel">Travel</option>
+            </select>
+
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="form-message"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Boundless Moments. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
